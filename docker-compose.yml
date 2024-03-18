@@ -31,7 +31,7 @@ services:
       - demo
 
   docker-demo-staging:
-    image: ${{ secrets.DOCKERHUB_USERNAME }}/docker-demo:staging
+    image: ${DOCKERHUB_USERNAME}/docker-demo:staging
     restart: always
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db-staging:5432/pgstaging
@@ -45,7 +45,7 @@ services:
       - demo
 
   docker-demo-prod:
-    image: ${{ secrets.DOCKERHUB_USERNAME }}/docker-demo:main
+    image: ${DOCKERHUB_USERNAME}/docker-demo:main
     restart: always
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db-prod:5432/pgprod
