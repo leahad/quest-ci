@@ -18,6 +18,7 @@
 		<java.version>21</java.version>
 		<image.name>docker-demo</image.name>
 		<image.tag>latest</image.tag>
+		<dockerhub.username>${env.DOCKERHUB_USERNAME}</dockerhub.username>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -58,7 +59,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<imageName>${DOCKERHUB_USERNAME}/${image.name}:${image.tag}</imageName>
+					<imageName>${dockerhub.username}/${image.name}:${image.tag}</imageName>
 					<image>
 						<builder>dashaun/builder:tiny</builder>
 						<env>
