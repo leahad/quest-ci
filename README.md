@@ -1,6 +1,6 @@
 # Continuous Integration with GitHub Action
 
-Our goal is to implement this user story: 
+Our goal is to implement this user story:  
 
 > As a developer, I want my application to be built **if I push new code** and all tests pass. The application should be deployable after the built, **so I can test my changes immediately**.
 
